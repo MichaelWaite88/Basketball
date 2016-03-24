@@ -89,19 +89,7 @@ while possession > 0:
             print("Your teammate MADE a 3 POINT SHOT!")
             score += 3
             possession -= 1
-        elif passed == 6:
-            print("Your teammate MISSED his shot.")
-            score += 0
-            possession -= 1
-        elif passed == 7:
-            print("Your teammate MISSED his shot.")
-            score += 0
-            possession -= 1
-        elif passed == 8:
-            print("Your teammate MISSED his shot.")
-            score += 0
-            possession -= 1
-        elif passed == 9:
+        elif 6 <= passed <= 9:
             print("Your teammate MISSED his shot.")
             score += 0
             possession -= 1
