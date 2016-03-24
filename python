@@ -98,11 +98,11 @@ while possession > 0:
             possession -= 1
         else:
             pass
-        print('\t\t\t\tSCORE:',score, "-", )
+        print('SCORE:',score, "-", )
     else:
         print("\nYour team TURNED the ball OVER.")
         possession -= 1
-        print('\t\t\t\tSCORE:',score, "-", )
+        print('SCORE:',score, "-", )
 
 
 print("End of the quarter.")
