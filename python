@@ -1,4 +1,3 @@
-
 import random
 
 print ("Welcome to the game!")
@@ -10,29 +9,29 @@ possession = 10
 score = 0
 
 while possession > 0:
-    print("\n\t\t\t\tIt's a new possession.")
+    print("\nIt's a new possession.")
     distance = random.randint(1,24)
     if distance == 21:
         print("You were fouled and MADE 1 out of 2 FREE THROWS.")
         possession -= 1
         score += 1
-        print('\t\t\t\tSCORE: ',score, "-")
+        print('SCORE: ',score, "-")
 
     elif distance == 22:
         print("You were fouled and MADE 2 out of 2 FREE THROWS.")
         possession -= 1
         score += 2
-        print('\t\t\t\tSCORE: ',score, "-")
+        print('SCORE: ',score, "-")
     elif distance == 23:
         print("You were fouled and MISSED 2 free throws.")
         possession -= 1
         score += 0
-        print('\t\t\t\tSCORE: ',score, "-")
+        print('SCORE: ',score, "-")
     elif distance == 24:
         print("\nOops, the ball was STOLEN from you.")
         possession -= 1
         score += 0
-        print('\t\t\t\tSCORE: ',score, "-\n")
+        print('SCORE: ',score, "-\n")
     else:
         pass
     print("\nYour team has the ball. You are", distance, "feet away from the hoop.")       
@@ -44,26 +43,26 @@ while possession > 0:
             print("SWISH! You MADE the shot!")
             possession -= 1
             score += 2
-            print('\t\t\t\tSCORE: ',score, "-")
+            print('SCORE: ',score, "-")
         elif strength == distance2 - 2 or strength == distance2 + 2 or strength == distance2 + 1 or strength == distance2 - 1 or strength == distance2 + 3 or strength == distance2 - 3:
             print("\nYou banked in the shot. Lucky shot..\n")
             possession -= 1
             score += 2
-            print('\t\t\t\tSCORE: ',score, "-")
+            print('SCORE: ',score, "-")
         elif strength == distance2 and distance > 17:
             print("SWISH! You made a 3 point shot!")
             possession -= 1
             score += 3
-            print('\t\t\t\tSCORE: ',score, "-")
+            print('SCORE: ',score, "-")
         elif strength == distance2 - 2 or strength == distance2 + 2 or strength == distance2 + 1 or strength == distance2 - 1 or strength == distance2 + 3 or strength == distance2 - 3:
             print("\nYou banked in the shot. Lucky shot..\n")
             possession -= 1
             score += 3
-            print('\t\t\t\tSCORE: ',score, "-")
+            print('SCORE: ',score, "-")
         else:
             print("You missed the shot.")
             possession -= 1
-            print('\t\t\t\tSCORE:',score, "-\n", )
+            print('SCORE:',score, "-\n", )
 
     elif choose == '2':
         print("\nYou passed the ball to a teammate.\n")
