@@ -1,0 +1,123 @@
+import random
+
+print ("\t\t\t\tWelcome to the game!")
+print("Background information: If you want to shoot Press 1. Then choose the strength of the shot you want to shoot. Your shooting strength is a percentage."
+      "Or you can press 2 to pass the ball to your teammate")
+print ("\n\t\t\t\tIt's time for tip-off!")
+
+
+
+possession = 10
+score = 0
+
+while possession > 0:
+    print("\n\t\t\t\tIt's a new possession.")
+    distance = random.randint(1,24)
+    if distance == 21:
+        print("You were fouled and MADE 1 out of 2 FREE THROWS.")
+        possession -= 1
+        score += 1
+        print('\t\t\t\tSCORE: ',score, "-")
+
+    elif distance == 22:
+        print("You were fouled and MADE 2 out of 2 FREE THROWS.")
+        possession -= 1
+        score += 2
+        print('\t\t\t\tSCORE: ',score, "-")
+    elif distance == 23:
+        print("You were fouled and MISSED 2 free throws.")
+        possession -= 1
+        score += 0
+        print('\t\t\t\tSCORE: ',score, "-")
+    elif distance == 24:
+        print("\nOops, the ball was STOLEN from you.")
+        possession -= 1
+        score += 0
+        print('\t\t\t\tSCORE: ',score, "-\n")
+    else:
+        pass
+    print("\nYour team has the ball. You are", distance, "feet away from the hoop.")       
+    choose = input("What do you want to do? Press 1 to shoot or Press 2 to Pass: ")
+    if choose == '1':
+        strength = eval(input("\nWhat strength do you want to shoot it? "))
+        distance2 = distance * 5
+        if strength == distance2 and distance < 18:
+            print("SWISH! You MADE the shot!")
+            possession -= 1
+            score += 2
+            print('\t\t\t\tSCORE: ',score, "-")
+        elif strength == distance2 - 2 or strength == distance2 + 2 or strength == distance2 + 1 or strength == distance2 - 1 or strength == distance2 + 3 or strength == distance2 - 3:
+            print("\nYou banked in the shot. Lucky shot..\n")
+            possession -= 1
+            score += 2
+            print('\t\t\t\tSCORE: ',score, "-")
+        elif strength == distance2 and distance > 17:
+            print("SWISH! You made a 3 point shot!")
+            possession -= 1
+            score += 3
+            print('\t\t\t\tSCORE: ',score, "-")
+        elif strength == distance2 - 2 or strength == distance2 + 2 or strength == distance2 + 1 or strength == distance2 - 1 or strength == distance2 + 3 or strength == distance2 - 3:
+            print("\nYou banked in the shot. Lucky shot..\n")
+            possession -= 1
+            score += 3
+            print('\t\t\t\tSCORE: ',score, "-")
+        else:
+            print("You missed the shot.")
+            possession -= 1
+            print('\t\t\t\tSCORE:',score, "-\n", )
+
+    elif choose == '2':
+        print("\nYou passed the ball to a teammate.\n")
+        passed = random.randint(1,10)
+
+        if passed == 1:
+            print("Your teammate MADE a FREETHROW.")
+            score += 1
+            possession -= 1
+        elif passed == 2:
+            print("Your teammate MADE a LAYUP.")
+            score += 2
+            possession -= 1
+        elif passed == 3:
+            print("Your teammate DUNKED it!")
+            score += 2
+            possession -= 1
+        elif passed == 4:
+            print("Your teammate MADE a JUMPSHOT.")
+            score += 2
+            possession -= 1
+        elif passed == 5:
+            print("Your teammate MADE a 3 POINT SHOT!")
+            score += 3
+            possession -= 1
+        elif passed == 6:
+            print("Your teammate MISSED his shot.")
+            score += 0
+            possession -= 1
+        elif passed == 7:
+            print("Your teammate MISSED his shot.")
+            score += 0
+            possession -= 1
+        elif passed == 8:
+            print("Your teammate MISSED his shot.")
+            score += 0
+            possession -= 1
+        elif passed == 9:
+            print("Your teammate MISSED his shot.")
+            score += 0
+            possession -= 1
+        elif passed == 10:
+            print("One of your teammates TURNED OVER the ball.")
+            score += 0
+            possession -= 1
+        else:
+            pass
+        print('\t\t\t\tSCORE:',score, "-", )
+    else:
+        print("\nYour team TURNED the ball OVER.")
+        possession -= 1
+        print('\t\t\t\tSCORE:',score, "-", )
+
+quarter = "End of the quarter.";    
+print("quarter.center(18,'*') : ", quarter.center(18, '*')
+print("\n\n\t\t\tSCORE: ", score, "-")
