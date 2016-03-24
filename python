@@ -1,11 +1,10 @@
+
 import random
 
-print ("\t\t\t\tWelcome to the game!")
+print ("Welcome to the game!")
 print("Background information: If you want to shoot Press 1. Then choose the strength of the shot you want to shoot. Your shooting strength is a percentage."
       "Or you can press 2 to pass the ball to your teammate")
-print ("\n\t\t\t\tIt's time for tip-off!")
-
-
+print ("\nIt's time for tip-off!")
 
 possession = 10
 score = 0
@@ -118,6 +117,6 @@ while possession > 0:
         possession -= 1
         print('\t\t\t\tSCORE:',score, "-", )
 
-quarter = "End of the quarter.";    
-print("quarter.center(18,'*') : ", quarter.center(18, '*')
-print("\n\n\t\t\tSCORE: ", score, "-")
+
+print("End of the quarter.")
+print("SCORE: ", score, "-")
